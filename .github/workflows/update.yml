@@ -19,4 +19,4 @@ jobs:
           python-version: "3.11"
 
       - name: Run script
-        run: update_nem_data.py
+        run: python update_nem_data.py
