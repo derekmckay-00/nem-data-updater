@@ -10,14 +10,28 @@ jobs:
   run-python:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+      id-token: write
+
     steps:
       - name: Check out repo
         uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: projects/646651227061/locations/global/workloadIdentityPools/github/providers/github
+          service_account: service-account-name-github-dr@project-7e39dff8-8727-46a8-8f0.iam.gserviceaccount.com
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
+      - name: Install packages
+        run: |
+          pip install pandas requests google-api-python-client google-auth
 
       - name: Run script
         run: python update_nem_data.py
