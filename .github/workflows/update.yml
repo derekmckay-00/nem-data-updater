@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      DRIVE_FILE_ID: 1f-KosrBae4m0Ifbyx5ZZAPZXTNStPieF
+      DRIVE_FILE_NAME: nem_data.db
 
     permissions:
       contents: read
