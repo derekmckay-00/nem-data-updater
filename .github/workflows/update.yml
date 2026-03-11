@@ -1,4 +1,3 @@
-
 name: Run updater
 
 on:
@@ -11,8 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-  DRIVE_FILE_ID: 1f-KosrBae4mOIfbyx5ZZAPZXTNStPIeF
-  
+      DRIVE_FILE_ID: 1f-KosrBae4m0Ifbyx5ZZAPZXTNStPieF
 
     permissions:
       contents: read
