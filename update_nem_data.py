@@ -1,1 +1,1 @@
-print("Running NEM data update job")
+print("Hello from GitHub Actions")
